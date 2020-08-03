@@ -9,7 +9,7 @@ SETLOCAL ENABLEDELAYEDEXPANSION
     SET "utility_sfx=%utility_folder%software.exe"
     SET "python_paths=%utility_software_folder%\install;%utility_software_folder%\install\Scripts"
 
-    CALL "%utility_folder%..\utils\setup.cmd" cecho 7zip
+    CALL "%utility_folder%..\win-utils\setup.cmd" cecho 7zip
 
     SET help_arg=false
     SET pack_arg=false
