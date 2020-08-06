@@ -86,13 +86,15 @@ EXIT /B 0
     cecho {olive}[TOOLSET - UTILS - PYTHON]{red} ERROR: %~1 {default} {\n}
 EXIT /B 0
 
+
+
 :SHOW_HELP
     SET "script_name=%~n0%~x0"
     ECHO #######################################################################
     ECHO #                                                                     #
     ECHO #                      T O O L   S E T U P                            #
     ECHO #                                                                     #
-    ECHO #              'PYTHON' is an interpreted, high-level, 
+    ECHO #              'PYTHON' is an interpreted, high-level,                #
     ECHO #               general-purpose programming language.                 #
     ECHO #                                                                     #
     ECHO # TOOL   : PYTHON                                                     #
@@ -100,7 +102,7 @@ EXIT /B 0
     ECHO # ARCH   : x64                                                        #
     ECHO #                                                                     #
     ECHO # USAGE:                                                              #
-    ECHO #   %SCRIPT_NAME% [-h^|--help^|--pack^|--unpack]                             #
+    ECHO #     %SCRIPT_NAME% [-h^|--help^|--pack^|--unpack]                           #
     ECHO #                                                                     #
     ECHO # EXAMPLES:                                                           #
     ECHO #     %script_name%                                                       #
@@ -117,13 +119,13 @@ EXIT /B 0
     ECHO #         to the software folder.                                     #
     ECHO #                                                                     #
     ECHO # EXPORTED ENVIRONMENT VARIABLES:                                     #
-    ECHO #     TOOLSET_PYTHON_PATH    Absolute path where this tool is        #
+    ECHO #     TOOLSET_PYTHON_PATH    Absolute path where this tool is         #
     ECHO #         located.                                                    #
     ECHO #                                                                     #
     ECHO #     PATH    This tool will export all local changes that it made to #
     ECHO #         the path's environment variable.                            #
     ECHO #                                                                     #
-    ECHO #     The environment variables will be exported only if this script  #
+    ECHO #     The environment variables will be exported only if this tool    #
     ECHO #     executes without any error.                                     #
     ECHO #                                                                     #
     ECHO #######################################################################
