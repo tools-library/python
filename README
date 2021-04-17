@@ -1,18 +1,18 @@
 
-                     P Y T H O N
+                        P Y T H O N
 
-'PYTHON' is an interpreted, high-level, general-purpose
-programming language.
+    'PYTHON' is an interpreted, high-level, general-purpose
+    programming language.
 
-Website https://python-build-standalone.readthedocs.io/en/latest
-Repository https://github.com/XNerv/python-build-standalone
+    Website https://python-build-standalone.readthedocs.io/en/latest
+    Repository https://github.com/XNerv/python-build-standalone
 
-Observation    The repository above is a fork from original
-    repository 'https://github.com/indygreg/python-build-
-    standalone'.
+    Observation    The repository above is a fork from original
+        repository 'https://github.com/indygreg/python-build-
+        standalone'.
 
-After running the setup.cmd, the tool will be available in
-the system path.
+    After running the setup.cmd, the tool will be available in
+    the system path.
 
 TOOL   : PYTHON
 VERSION: 3.8.9
