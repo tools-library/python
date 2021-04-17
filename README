@@ -1,5 +1,46 @@
-Website    : https://python-build-standalone.readthedocs.io/en/latest
-Repository : https://github.com/XNerv/python-build-standalone
 
-Observation: The repository above is a fork from original repository
-             https://github.com/indygreg/python-build-standalone.
+                     P Y T H O N
+
+'PYTHON' is an interpreted, high-level, general-purpose
+programming language.
+
+Website https://python-build-standalone.readthedocs.io/en/latest
+Repository https://github.com/XNerv/python-build-standalone
+
+Observation    The repository above is a fork from original
+    repository 'https://github.com/indygreg/python-build-
+    standalone'.
+
+After running the setup.cmd, the tool will be available in
+the system path.
+
+TOOL   : PYTHON
+VERSION: 3.8.9
+ARCH   : x64
+
+USAGE:
+    setup.cmd [-h|--help|--pack|--unpack]
+
+EXAMPLES:
+    setup.cmd
+    setup.cmd -h
+    setup.cmd --pack
+
+ARGUMENTS:
+    -h|--help    Print this help and exit.
+
+    --pack    Pack the content of the software folder in one
+        self-extract executable called 'software.exe'.
+
+    --unpack    Unpack the self-extract executable 'software.exe'
+        to the software folder.
+
+EXPORTED ENVIRONMENT VARIABLES:
+    TOOLSET_PYTHON_PATH    Absolute path where this tool is
+        located.
+
+    PATH    This tool will export all local changes that it made to
+        the path's environment variable.
+
+    The environment variables will be exported only if this tool
+    executes without any error.

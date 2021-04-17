@@ -1,0 +1,25 @@
+
+We use the releases published in the repository
+https://github.com/indygreg/python-build-standalone
+
+For some reason, the pip doesn't work at first. For the pip to work
+you need to reinstall it via the 'get-pip.py' which can be obtained
+in the following url https://bootstrap.pypa.io/get-pip.py
+
+Procedures to reinstall the pip:
+
+1 - Open a cmd terminal.
+
+2 - Execute:
+         setup.cmd
+
+3 - Download the get-pip.py file and save to the root of this directory.
+
+4 - Execute:
+         python get-pip.py --ignore-installed
+
+5 - Follow the installation.
+
+OBS:
+     If - after installation - some packages are missing,
+     install them using the pip.

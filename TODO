@@ -1,0 +1,10 @@
+
+* Enhance the contrib file to show how a new version of the packaged
+software can be integrated.
+
+* Add an argument indicating that changes made to the 'PATH'
+environment variable should not be exported. The main reason
+for this is that we could use this tool with minimal impact
+on the system's environment variables. That way, when we are
+going to use this tool, we can find them based on the exported
+environment variable 'TOOLSET_PYTHON_PATH'.
