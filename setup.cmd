@@ -9,17 +9,18 @@ SETLOCAL ENABLEDELAYEDEXPANSION
     SET "utility_sfx=%utility_folder%software.exe"
     SET "python_paths=%utility_software_folder%\install;%utility_software_folder%\install\Scripts"
 
+    REM Load dependent tools...
     CALL "%utility_folder%..\win-utils\setup.cmd" cecho 7zip
 
     SET help_arg=false
     SET pack_arg=false
     SET unpack_arg=false
 
-    SET current_arg=%1
-    IF  [%current_arg%] EQU [-h]       SET help_arg=true
-    IF  [%current_arg%] EQU [--help]   SET help_arg=true
-    IF  [%current_arg%] EQU [--pack]   SET pack_arg=true
-    IF  [%current_arg%] EQU [--unpack] SET unpack_arg=true
+    SET first_arg=%1
+    IF  [%first_arg%] EQU [-h]       SET help_arg=true
+    IF  [%first_arg%] EQU [--help]   SET help_arg=true
+    IF  [%first_arg%] EQU [--pack]   SET pack_arg=true
+    IF  [%first_arg%] EQU [--unpack] SET unpack_arg=true
 
     IF  [%help_arg%] EQU [true] (
         CALL :SHOW_HELP
@@ -52,7 +53,7 @@ EXIT /B 0
 :MAIN
     CALL :UNPACK
 
-    REM Check if the 'utility_software_folder' is not already in system path. If
+    REM Check if the 'python_paths' is not already in system path. If
     REM not, insert it.
     IF "!PATH:%python_paths%=!" EQU "%PATH%" (
         SET "PATH=%python_paths%;%PATH%"
@@ -79,11 +80,11 @@ EXIT /B 0
 
 
 :SHOW_INFO
-    cecho {olive}[TOOLSET - UTILS - PYTHON]{default} INFO: %~1{\n}
+    cecho {olive}[TOOLSET - PYTHON]{default} INFO: %~1{\n}
 EXIT /B 0
 
 :SHOW_ERROR
-    cecho {olive}[TOOLSET - UTILS - PYTHON]{red} ERROR: %~1 {default} {\n}
+    cecho {olive}[TOOLSET - PYTHON]{red} ERROR: %~1 {default} {\n}
 EXIT /B 0
 
 
@@ -94,11 +95,21 @@ EXIT /B 0
     ECHO #                                                                     #
     ECHO #                      T O O L   S E T U P                            #
     ECHO #                                                                     #
-    ECHO #              'PYTHON' is an interpreted, high-level,                #
-    ECHO #               general-purpose programming language.                 #
+    ECHO #   'PYTHON' is an interpreted, high-level, general-purpose           #
+    ECHO #    programming language.                                            #
+    ECHO #                                                                     #
+    ECHO #    Website https://python-build-standalone.readthedocs.io/en/latest #
+    ECHO #    Repository https://github.com/XNerv/python-build-standalone      #
+    ECHO #                                                                     #
+    ECHO #    Observation    The repository above is a fork from original      #
+    ECHO #        repository 'https://github.com/indygreg/python-build-        #
+    ECHO #        standalone'.                                                 #
+    ECHO #                                                                     #
+    ECHO #    After running the %SCRIPT_NAME%, the tool will be available in       #
+    ECHO #    the system path.                                                 #
     ECHO #                                                                     #
     ECHO # TOOL   : PYTHON                                                     #
-    ECHO # VERSION: 3.8.3                                                      #
+    ECHO # VERSION: 3.8.9                                                      #
     ECHO # ARCH   : x64                                                        #
     ECHO #                                                                     #
     ECHO # USAGE:                                                              #
